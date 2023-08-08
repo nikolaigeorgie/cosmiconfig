@@ -1,18 +1,18 @@
-import fs from 'fs';
+// import fs from 'fs';
 
 async function fsReadFileAsync(
   pathname: string,
   encoding: BufferEncoding,
 ): Promise<string> {
   return new Promise((resolve, reject): void => {
-    fs.readFile(pathname, encoding, (error, contents): void => {
-      if (error) {
-        reject(error);
-        return;
-      }
+    // fs.readFile(pathname, encoding, (error, contents): void => {
+    //   if (error) {
+    //     reject(error);
+    //     return;
+    //   }
 
-      resolve(contents);
-    });
+    //   resolve(contents);
+    // });
   });
 }
 
