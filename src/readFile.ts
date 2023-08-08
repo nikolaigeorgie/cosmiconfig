@@ -10,7 +10,6 @@ async function fsReadFileAsync(
     //     reject(error);
     //     return;
     //   }
-
     //   resolve(contents);
     // });
   });
@@ -42,13 +41,16 @@ async function readFile(
   }
 }
 
-function readFileSync(filepath: string, options: Options = {}): string | null {
+function readFileSync(
+  filepath: string,
+  options: Options = {},
+): string | null | any {
   const throwNotFound = options.throwNotFound === true;
 
   try {
-    const content = fs.readFileSync(filepath, 'utf8');
-
-    return content;
+    // const content = fs.readFileSync(filepath, 'utf8');
+    // return content;
+    return null;
   } catch (error: any) {
     if (
       throwNotFound === false &&
